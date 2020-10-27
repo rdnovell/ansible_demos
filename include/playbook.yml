@@ -4,5 +4,5 @@
   connection: local
   tasks:
     - name: Test service status
-      service: name=ntpd state=started
+      service: name=rsyslog state=started
     - include: otro_playbook.yml
