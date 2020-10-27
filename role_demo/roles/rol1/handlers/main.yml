@@ -1,4 +1,5 @@
 ---
 - name: notify_obj
-  command: echo "hello"
+  service: name=rsyslog state=started
+
   
