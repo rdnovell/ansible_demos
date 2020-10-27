@@ -1,0 +1,4 @@
+---
+- name: Test service status
+  service: name=rsyslog state=started
+  notify: notify_obj
