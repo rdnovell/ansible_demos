@@ -1,6 +1,6 @@
 ---
 - name: Test roles
-  host: ubuntu_servers
+  hosts: ubuntu_servers
   connection: local
   roles:
    - role: rol1
