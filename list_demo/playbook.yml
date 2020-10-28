@@ -4,7 +4,7 @@
   connection: local
   tasks:
     - name: Test loop use
-      command: ls -ltr {{ item }}
+      command: ls -ltr /home/rdnovell/{{ item }}
       loop:
         - file1
         - file2
