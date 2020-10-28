@@ -1,0 +1,10 @@
+---
+- name: Register test
+  hosts: ubuntu_servers
+  connection: local
+  tasks:
+    - name: Test register use
+      command: ls -ltr
+      register: output
+    - debug: msg="{{ output.stdout }}"
+    - debug: var=output.stdout_lines  

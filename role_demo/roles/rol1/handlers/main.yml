@@ -1,5 +1,5 @@
 ---
 - name: notify_obj
-  command: echo "hello"
+  action: command echo "hello"
   
   
