@@ -5,7 +5,7 @@ import re, sys
 
 if __name__ == '__main__':
   fields = {
-  "yourName": {"required": True, "type": "str"}
+    "yourName": {"required": True, "type": "str"}
   }
   module = AnsibleModule(argument_spec=fields)
   yourName = os.path.expanduser(module.params['yourName'])
