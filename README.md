@@ -19,3 +19,24 @@ Filesystem                         Size  Used Avail Use% Mounted on
 To run a play
 
 ansible-playbook playbook.yml
+
+To run demos
+
+git clone https://github.com/rdnovell/ansible_demos 
+
+cd ansible_demos
+
+ansible-playbook include_demo/playbook.yml
+
+ansible-playbook register_demo/playbook.yml
+
+ansible-playbook fact_demo/playbook.yml
+
+ansible-playbook list_demo/playbook.yml
+
+ansible-playbook role_demo/roles.yml
+
+ansible-playbook var_demo/main.yml
+
+ansible-playbook custom_module_demo/main.yml
+

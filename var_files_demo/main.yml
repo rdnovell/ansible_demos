@@ -1,0 +1,7 @@
+---
+- name: Var files test
+  hosts: ubuntu_servers
+  tasks:
+    - include_vars: vars.yml
+    - name: Test vars file use
+      command: ls -ltr /{{ home_folder }}/{{ user }}/{{ item }}

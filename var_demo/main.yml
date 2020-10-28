@@ -6,5 +6,5 @@
     user: rdnovell
     item: file1
   tasks:
-    - name: Test loop use
+    - name: Test var use
       command: ls -ltr /{{ home_folder }}/{{ user }}/{{ item }}
