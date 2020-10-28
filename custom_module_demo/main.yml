@@ -11,3 +11,8 @@
       my_python: yourName={{ getName }}
       register: result
     - debug: var=result
+    - name: Python Execution v2
+      my_python_v2: 
+        name: carlos
+      register: result2
+    - debug: var=result2
