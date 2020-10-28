@@ -7,4 +7,4 @@
     item: file1
   tasks:
     - name: Test var use
-      command: ls -ltr /{{ home_folder }}/{{ user }}/{{ item }}
+      debug: msg="ls -ltr /{{ home_folder }}/{{ user }}/{{ item }}" 

@@ -4,4 +4,4 @@
   tasks:
     - include_vars: vars.yml
     - name: Test vars file use
-      command: ls -ltr /{{ home_folder }}/{{ user }}/{{ item }}
+      debug: msg="ls -ltr /{{ home_folder }}/{{ user }}/{{ item }}"
