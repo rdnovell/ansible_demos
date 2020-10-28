@@ -3,4 +3,4 @@
   service: name=rsyslog state=restarted
   notify: notify_obj
 - name: Say hi
-     command: echo "hi ..."
+  command: echo "hi ..."
