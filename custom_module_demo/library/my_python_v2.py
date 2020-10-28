@@ -4,9 +4,9 @@ import os, json
 import re, sys
 
 if __name__ == '__main__':
-   arguments = dict(
-     name=dict(required=True)
-     )
+  arguments = dict(
+    name=dict(required=True)
+  )
 
   module = AnsibleModule(argument_spec=arguments)
   yourName = module.params['name']
