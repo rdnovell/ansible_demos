@@ -1,0 +1,10 @@
+---
+- name: Var test
+  hosts: ubuntu_servers
+  vars:
+    home_folder: home
+    user: rdnovell
+    item: file1
+  tasks:
+    - name: Test loop use
+      command: ls -ltr /{{ home_folder }}/{{ user }}/{{ item }}
