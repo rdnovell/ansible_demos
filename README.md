@@ -1,6 +1,6 @@
 # ansible_demos
 
-Test conn
+## Test conn
 
 ansible all -m ping
 
@@ -9,19 +9,24 @@ ubuntu_test | SUCCESS => {
     "ping": "pong"
 }
 
-Run commands
+## Run commands
 
+```console
 ansible all -a "df -h ."
 ubuntu_test | CHANGED | rc=0 >>
 Filesystem                         Size  Used Avail Use% Mounted on
 /dev/mapper/ubuntu--vg-ubuntu--lv  5.9G  3.0G  2.6G  54% /
+```
 
-To run a play
+## To run a play
 
+```console
 ansible-playbook playbook.yml
+```
 
-To run demos
+## To run demos
 
+```console
 git clone https://github.com/rdnovell/ansible_demos 
 
 cd ansible_demos
@@ -38,5 +43,8 @@ ansible-playbook role_demo/roles.yml
 
 ansible-playbook var_demo/main.yml
 
+ansible-playbook var_files_demo/main.yml
+
 ansible-playbook custom_module_demo/main.yml
+```
 
