@@ -1,0 +1,12 @@
+---
+- hosts: routeros01
+  gather_facts: false
+  connection: network_cli
+
+  collections:
+    - community.network
+
+  tasks:
+    - name: Gather facts from the device.
+      routeros_facts:
+         gather_subset: all
