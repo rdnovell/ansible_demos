@@ -1,7 +1,6 @@
 ---
 - name: Loop test
   hosts: ubuntu_servers
-  connection: local
   tasks:
     - name: Test loop use
       command: ls -ltr /home/rdnovell/{{ item }}
