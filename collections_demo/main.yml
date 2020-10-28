@@ -1,12 +1,9 @@
 ---
 - hosts: ubuntu_servers
   gather_facts: false
-  connection: network_cli
-
   collections:
-    - community.network
-
+    - community.general
   tasks:
     - name: Gather facts from the device.
-      routeros_facts:
+      nginx_status_facts:
          gather_subset: all
