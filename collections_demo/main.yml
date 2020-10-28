@@ -1,13 +1,11 @@
 ---
 # https://github.com/ansible-collections/community.general/blob/main/plugins/modules/web_infrastructure/nginx_status_facts.py
 - hosts: ubuntu_servers
-  gather_facts: false
   collections:
     - community.general
   tasks:
     - name: Gather facts from the device.
       nginx_status_facts:
         url: http://localhost/nginx_status
-        gather_subset: all
     - name: NGINX data
-      debug: msg="{{ nginx_status_facts.data }}"  
+      debug: msg="{{ nginx_status_facts.data }}"

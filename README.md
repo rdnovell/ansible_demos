@@ -46,5 +46,7 @@ ansible-playbook var_demo/main.yml
 ansible-playbook var_files_demo/main.yml
 
 ansible-playbook custom_module_demo/main.yml
+
+ansible-playbook collections_demo/main.yml
 ```
 
