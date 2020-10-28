@@ -1,0 +1,13 @@
+---
+- name: Custom module test
+  hosts: ubuntu_servers
+  vars_prompt:
+   - name: getName
+     prompt: "Cual es tu nombre"
+     private: no
+     failed_when: getName is undefined
+  tasks:
+  - name: Python Execution
+    my_python: yourName={{ getName }}
+    register: result
+  - debug: var=result
