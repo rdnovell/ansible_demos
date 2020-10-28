@@ -1,9 +1,9 @@
 ---
 - hosts: ubuntu_servers
-  gather_facts: false
   collections:
     - community.general
   tasks:
     - name: Gather facts from the device.
       nginx_status_facts:
-         gather_subset: all
+      url: http://localhost/nginx_status
+      
