@@ -7,7 +7,7 @@
      private: no
      failed_when: getName is undefined
   tasks:
-  - name: Python Execution
-    my_python: yourName={{ getName }}
-    register: result
-  - debug: var=result
+    - name: Python Execution
+      my_python: yourName={{ getName }}
+      register: result
+    - debug: var=result
