@@ -20,3 +20,14 @@
         name: carlos
       register: result2
     - debug: var=result2
+    - name: test my new module
+      hosts: localhost
+      tasks:
+      - name: run the new module
+        my_python_v3:
+          name: 'hello'
+          new: true
+        register: testout
+      - name: dump test output
+        debug:
+          msg: '{{ testout }}'
