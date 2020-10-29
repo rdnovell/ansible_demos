@@ -68,15 +68,15 @@ git clone https://github.com/rdnovell/ansible_demos
 
 cd ansible_demos
 
-ansible-playbook include_demo/playbook.yml
+ansible-playbook include_demo/main.yml
 
-ansible-playbook register_demo/playbook.yml
+ansible-playbook register_demo/main.yml
 
-ansible-playbook fact_demo/playbook.yml
+ansible-playbook fact_demo/main.yml
 
-ansible-playbook list_demo/playbook.yml
+ansible-playbook list_demo/main.yml
 
-ansible-playbook role_demo/roles.yml
+ansible-playbook role_demo/main.yml
 
 ansible-playbook var_demo/main.yml
 

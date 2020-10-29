@@ -1,4 +1,4 @@
-# Example usage: ansible-playbook role_demo/roles.yml
+# Example usage: ansible-playbook role_demo/main.yml
 # This playbook use a role and notify on the play
 
 ---
