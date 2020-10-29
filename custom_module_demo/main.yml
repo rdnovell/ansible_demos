@@ -14,12 +14,16 @@
     - name: Python Execution
       my_python: yourName={{ getName }}
       register: result
-    - debug: var=result
+    - name: dump test result
+      debug: 
+        msg: '{{ result }}'
     - name: Python Execution v2
       my_python_v2: 
         name: carlos
       register: result2
-    - debug: var=result2
+    - name: dump test result2
+      debug: 
+        msg: '{{ result2 }}'
     - name: test my new module
       hosts: localhost
       tasks:
