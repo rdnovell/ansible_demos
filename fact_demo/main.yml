@@ -1,4 +1,8 @@
+# Example usage: ansible-playbook fact_demo/main.yml
+# This playbook get information from ansible_facts
+
 ---
+
 - name: Facts test
   hosts: ubuntu_servers
   tasks:

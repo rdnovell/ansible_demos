@@ -1,7 +1,12 @@
----
+
+# Example usage: ansible-playbook list_demo/main.yml
+# This playbook use a list on the play
 # https://docs.ansible.com/ansible/latest/user_guide/playbooks_loops.html
 # https://docs.ansible.com/ansible/latest/user_guide/playbooks_filters.html#transforming-dictionaries-into-lists
 # https://docs.ansible.com/ansible/latest/user_guide/playbooks_filters.html#transforming-lists-into-dictionaries
+
+---
+
 - name: Loop test
   hosts: ubuntu_servers
   tasks:

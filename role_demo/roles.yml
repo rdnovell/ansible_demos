@@ -1,4 +1,8 @@
+# Example usage: ansible-playbook role_demo/roles.yml
+# This playbook use a role and notify on the play
+
 ---
+
 - name: Test roles
   hosts: ubuntu_servers
   become: true

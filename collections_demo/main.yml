@@ -1,5 +1,9 @@
----
+# Example usage: ansible-playbook collections_demo/main.yml
+# This playbook get information about NGINX using community.general collection
 # https://github.com/ansible-collections/community.general/blob/main/plugins/modules/web_infrastructure/nginx_status_facts.py
+
+---
+
 - hosts: ubuntu_servers
   collections:
     - community.general

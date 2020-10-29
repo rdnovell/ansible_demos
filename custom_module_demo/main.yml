@@ -1,4 +1,8 @@
+# Example usage: ansible-playbook custom_module_demo/main.yml
+# This playbook use a custom module to print the name
+
 ---
+
 - name: Custom module test
   hosts: ubuntu_servers
   vars_prompt:

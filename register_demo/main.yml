@@ -1,4 +1,8 @@
+# Example usage: ansible-playbook register_demo/main.yml
+# This playbook use a register and debug on the play
+
 ---
+
 - name: Register test
   hosts: ubuntu_servers
   tasks:
