@@ -24,14 +24,11 @@
     - name: dump test result2
       debug: 
         msg: '{{ result2 }}'
-    - name: test my new module
-      hosts: localhost
-      tasks:
-      - name: run the new module
-        my_python_v3:
-          name: 'hello'
-          new: true
-        register: testout
-      - name: dump test output
-        debug:
-          msg: '{{ testout }}'
+    - name: run the new module
+      my_python_v3:
+        name: 'hello'
+        new: true
+      register: testout
+    - name: dump test output
+      debug:
+        msg: '{{ testout }}'
