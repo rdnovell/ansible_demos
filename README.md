@@ -4,16 +4,18 @@
 
 ### Strings
 
-```console
+```yaml
 'A single-quoted string in YAML'
 "A double-quoted string in YAML\n"
 ```
 
-```console
+### Comments
+```yaml
 # Comment on a line
 ```
 
-```console
+### Lists
+```yaml
 # A list of tasty fruits
 items:
   - Apple
@@ -25,7 +27,8 @@ items:
 items: ['Apple', 'Orange', 'Strawberry', 'Mango']
 ```
 
-```console
+### Dicts
+```yaml
 # An employee record dict
 martin:
   name: Martin D'vloper
