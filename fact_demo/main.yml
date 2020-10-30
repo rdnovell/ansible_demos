@@ -14,3 +14,7 @@
       debug: msg="{{ ansible_distribution_major_version }}"
     - name: All
       debug: msg="{{ ansible_facts }}"
+    - name: Get custom facts
+      set_fact:
+        my_fact: value1
+      debug: msg=" The custom fact is {{ my_fact }}" 
