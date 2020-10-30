@@ -140,4 +140,5 @@ ansible-playbook collections_demo/main.yml
 https://docs.ansible.com/ansible/latest/collections/ansible/builtin/free_strategy.html#free-strategy
 
 hosts: all
-strategy: free
+  strategy: free
+
