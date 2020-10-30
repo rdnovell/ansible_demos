@@ -133,3 +133,11 @@ ansible-playbook custom_module_demo/main.yml
 ansible-playbook collections_demo/main.yml
 ```
 
+## Details
+
+### Run tasks in parallel for each hosts, not host linear lock
+
+https://docs.ansible.com/ansible/latest/collections/ansible/builtin/free_strategy.html#free-strategy
+
+hosts: all
+strategy: free
