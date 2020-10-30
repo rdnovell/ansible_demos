@@ -35,6 +35,15 @@ martin:
   job: Developer
   skill: Elite
 ```
+### Transforming dictionaries into lists
+```yaml
+{{ dict | dict2items }}
+```
+
+### Transforming lists into dictionaries
+```yaml
+{{ tags | items2dict }}
+```
 
 ## Ansible 
 
