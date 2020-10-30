@@ -20,4 +20,4 @@
     - name: Get custom facts
       debug: msg="The custom fact is {{ my_fact }}" 
     - name: Get custom facts
-      debug: msg="The custom fact is {{ my_fact }}"
+      debug: msg="The custom fact is {{ my_fact2 | default('the default')}} "
