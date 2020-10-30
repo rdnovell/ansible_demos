@@ -1,4 +1,4 @@
-# ansible_demos
+# Ansible and YAML for dummies
 
 ## Yaml examples
 
@@ -36,7 +36,53 @@ martin:
   skill: Elite
 ```
 
-## Test conn
+## Ansible 
+
+## Installation
+
+```yaml
+sudo apt-add-repository ppa:ansible/ansible
+sudo apt update
+sudo apt install ansible
+
+sudo vi /etc/ansible/hosts
+
+Output /etc/ansible/hosts
+[servers]
+server1 ansible_host=192.168.1.2
+server2 ansible_host=192.168.1.3
+server3 ansible_host=192.168.1.4
+
+[servers:vars]
+ansible_python_interpreter=/usr/bin/python3
+
+ansible-inventory --list -y
+
+Output
+all:
+  children:
+    servers:
+      hosts:
+        server1:
+          ansible_host: 192.168.1.2
+          ansible_python_interpreter: /usr/bin/python3
+        server2:
+          ansible_host: 192.168.1.3
+          ansible_python_interpreter: /usr/bin/python3
+        server3:
+          ansible_host: 192.168.1.4
+          ansible_python_interpreter: /usr/bin/python3
+    ungrouped: {}
+
+ssh-keygen -t rsa
+ssh-copy-id -i ~/.ssh/id_rsa.pub 192.168.1.2
+ssh-copy-id -i ~/.ssh/id_rsa.pub 192.168.1.3
+ssh-copy-id -i ~/.ssh/id_rsa.pub 192.168.1.4
+```
+
+## Demos
+
+### Test conn
 
 ansible all -m ping
 
@@ -45,7 +91,7 @@ ubuntu_test | SUCCESS => {
     "ping": "pong"
 }
 
-## Run commands
+### Run commands
 
 ```console
 ansible all -a "df -h ."
@@ -55,13 +101,13 @@ Filesystem                         Size  Used Avail Use% Mounted on
 /dev/mapper/ubuntu--vg-ubuntu--lv  5.9G  3.0G  2.6G  54% /
 ```
 
-## To run a play
+### To run a play
 
 ```console
 ansible-playbook playbook.yml
 ```
 
-## To run demos
+### To run demos
 
 ```console
 git clone https://github.com/rdnovell/ansible_demos 
