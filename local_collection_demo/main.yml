@@ -1,0 +1,32 @@
+---
+
+- name: check and start and check
+  hosts: ubuntu_servers
+  tasks:
+
+    - name: role from a collection
+      import_role:
+        name: itnow.weblogic.rol1
+
+    - name: falso status
+      itnow.weblogic.status:
+      register: fake
+    - debug: msg="{{ fake }}"
+
+    - name: precheck
+      itnow.weblogic.manager:
+        hola: params pre
+      register: out_pre
+    - debug: msg="{{ out_pre }}"
+
+    - name: "start"
+      itnow.weblogic.manager:
+        adios: params start
+      register: out_start
+    - debug: msg="{{ out_start }}"
+
+    - name: "postcheck"
+      itnow.weblogic.manager:
+        hola: params post
+      register: out_post
+    - debug: msg="{{ out_post }}"
