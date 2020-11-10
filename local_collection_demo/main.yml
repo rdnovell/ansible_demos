@@ -4,7 +4,7 @@
   hosts: ubuntu_servers
   tasks:
 
-    - name: role from a collection
+    - name: role from collection
       import_role:
         name: itnow.weblogic.rol1
 
