@@ -1,0 +1,30 @@
+# Example usage: ansible-playbook custom_submodule_demo/main.yml
+# This playbook use a custom module to call internal stuff
+
+---
+
+- name: check and start and check
+  hosts: ubuntu_servers
+  tasks:
+
+    - name: precheck
+      weblogic:
+        hola: params pre
+      register: out_pre
+    - debug: msg="{{ out_pre }}"
+
+    - name: "start"
+      weblogic:
+        adios: params start
+      register: out_start
+    - debug: msg="{{ out_start }}"
+
+    - name: "postcheck"
+      weblogic:
+        hola: params post
+      register: out_post
+    - debug: 
+        msg:
+          "{{ out_post }}"
+
+ 
