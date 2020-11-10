@@ -1,0 +1,15 @@
+# Example usage: ansible-playbook custom_submodule_demo/main.yml
+# This playbook use a custom module to call internal stuff
+
+---
+
+- name: Custom module test
+  hosts: ubuntu_servers
+  tasks:
+    - name: run the new module
+      weblogic:
+        hola: heman
+        adios: skeletor
+      register: testout
+    - name: dump test output
+      debug: msg="{{ testout }}"
