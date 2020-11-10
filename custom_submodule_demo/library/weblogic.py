@@ -17,6 +17,7 @@ class Ansible:
         )
 
         self.module = module
+
         # Me creo un dict vacio para ir metiendo los resultados
         self.result = dict()
 

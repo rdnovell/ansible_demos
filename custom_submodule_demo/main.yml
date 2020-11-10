@@ -3,13 +3,28 @@
 
 ---
 
-- name: Custom module test
+- name: check and start and check
   hosts: ubuntu_servers
   tasks:
-    - name: run the new module
+
+    - name: precheck
       weblogic:
-        hola: heman
-        adios: skeletor
-      register: testout
-    - name: dump test output
-      debug: msg="{{ testout }}"
+        hola: params pre
+      register: out_pre
+    - debug: msg="{{ out_pre }}"
+
+    - name: "start"
+      weblogic:
+        adios: params start
+      register: out_start
+    - debug: msg="{{ out_start }}"
+
+    - name: "postcheck"
+      weblogic:
+        hola: params post
+      register: out_post
+    - debug: 
+        msg:
+          "{{ out_post }}"
+
+ 
