@@ -1,0 +1,3 @@
+---
+- name: '[WLS-PREPATCH-CHECKS][MAIN] include check opatch tasks'
+  import_tasks: "tareas/test.yml"
